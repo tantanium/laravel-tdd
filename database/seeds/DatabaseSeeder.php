@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+		DB::table('users')->delete();
         DB::table('users')->insert([
             'name' => str_random(10),
             'email' => 'tantanium@live.co.uk',
