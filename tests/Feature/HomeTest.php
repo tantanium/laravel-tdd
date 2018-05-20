@@ -18,5 +18,6 @@ class HomeTest extends TestCase
     {
         $response = $this->call('GET', '/home');
 		$response->assertStatus(302);
+		$response->assertRedirect('/login');
     }
 }
