@@ -23,7 +23,7 @@ class LoginTest extends TestCase
         'password' => 'niaga123',
         '_token' => csrf_token()
     ]);
-    $response->assertRedirect('/home');	
+    $response->assertRedirect('/home2');	
     
 	
     }
