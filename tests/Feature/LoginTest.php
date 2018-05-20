@@ -18,13 +18,12 @@ class LoginTest extends TestCase
     public function testExample()
     {
     //Session::start();
-    $response = $this->call('POST', '/login', [
-        'email' => 'tantanium@live.co.uk',
-        'password' => 'niaga123',
-        '_token' => csrf_token()
-    ]);
-    $response->assertRedirect('/home');	
-    
-	
-    }
+		$response = $this->call('POST', '/login', [
+			'email' => 'tantanium@live.co.uk',
+			'password' => 'niaga123',
+			'_token' => csrf_token()
+		]);
+		$response->assertRedirect('/home');	
+    }    
 }
+
