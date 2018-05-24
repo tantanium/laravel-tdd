@@ -17,7 +17,7 @@ class HomeTest extends TestCase
     public function testExample()
     {
         $response = $this->call('GET', '/home');
-		$response->assertStatus(200);
+		$response->assertStatus(302);
 		$response->assertRedirect('/login');
     }
 }
